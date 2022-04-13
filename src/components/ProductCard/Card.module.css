@@ -1,27 +1,38 @@
 .card_container{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  min-width: 24rem;
-  min-height: 40rem;
-  max-width: 24rem;
-  max-height: 40rem;
+  align-items: center;
+  width: 23rem;
+  height: 40rem;
 }
 
 .image_section{
-  min-width: 21rem;
-  min-height: 23rem;
-  max-width: 23rem;
-  max-height: 25rem;
+  width: 23rem;
+  height: 32rem;
+  display: flex;
+  justify-content: center;
 }
 
 .image {
-  width: 88%;
-  height: 89%;
+  width: 87%;
+  height: 85%;
+  margin-top: 2rem;
 }
 
 .title_section {
+  width: 100%;
+  margin-top: auto;
   background-color: black;
   color: white;
-  height: 10rem;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.product_title{
+  size: 5rem;
+  font-size: 1.2rem;
+  margin: 2rem;
 }

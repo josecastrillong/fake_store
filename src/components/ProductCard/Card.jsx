@@ -22,7 +22,9 @@ function Card() {
       <section className={styles.image_section}>
         <img className={styles.image} src={data[1].image} alt={data[1].title}/>
       </section>
-      <section className={styles.title_section}>{data[1].title}</section>
+      <section className={styles.title_section}>
+        <span className={styles.product_title}>{data[1].title}</span>
+      </section>
     </article>
   )
 }
