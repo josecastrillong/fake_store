@@ -1,8 +1,9 @@
 import { useQuery } from 'react-query'
 import { getProducts } from '../../api/store_items'
+import Card from '../ProductCard/Card'
 
 
-function Card() {
+function CardContainer() {
 
   const { isLoading, isError, data, error } = useQuery('todos', getProducts)
 
@@ -16,12 +17,12 @@ function Card() {
 
   // We can assume by this point that `isSuccess === true`
   return (
-    <article>
-      {data.map(todo => (
-        <section>{todo.title}</section>
+    <section>
+      {data.map(() => (
+        <Card key={data.id} image={data.image} title={data.title} />
       ))}
-    </article>
+    </section>
   )
 }
 
-export default Card;
+export default CardContainer;

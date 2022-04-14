@@ -1,10 +1,13 @@
 import { useQuery } from 'react-query'
+import PropTypes from 'prop-types'
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../api/store_items'
 import styles from './Card.module.css'
 
 
-function Card() {
+
+
+function Card({image, title}) {
 
   const [time, setTime] = useState(Math.round(Math.random() * (3600 - 10)));
   const clockTime = {
@@ -35,7 +38,7 @@ function Card() {
 
     <article className={styles.card_container}>
       <section className={styles.image_section}>
-        <img className={styles.image} src={data[1].image} alt={data[1].title}/>
+        <img className={styles.image} src={image} alt={data[1].title}/>
         <div className={styles.tick_tac}>{ time > 0 ? `${clockTime.minutes} min ${clockTime.seconds} seconds` : time}</div>
       </section>
       <section className={styles.title_section}>
