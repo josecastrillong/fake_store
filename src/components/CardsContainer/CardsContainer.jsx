@@ -1,6 +1,7 @@
 import { useQuery } from 'react-query'
 import { getProducts } from '../../api/store_items'
 import Card from '../ProductCard/Card'
+import styles from './CardsContainer.module.css'
 
 
 function CardContainer() {
@@ -17,9 +18,9 @@ function CardContainer() {
 
   // We can assume by this point that `isSuccess === true`
   return (
-    <section>
-      {data.map(() => (
-        <Card key={data.id} image={data.image} title={data.title} />
+    <section className={styles.product_section}>
+      {data.map((product) => (
+        <Card key={product.id} image={product.image} title={product.title} />
       ))}
     </section>
   )

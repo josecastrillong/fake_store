@@ -4,28 +4,38 @@
   align-items: center;
   width: 23rem;
   height: 40rem;
+  margin: auto; 
 }
 
 .image_section{
-  width: 23rem;
-  height: 32rem;
+  width: 100%;
+  height: 85%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
 }
 
 .image {
-  width: 87%;
-  height: 85%;
-  margin-top: 2rem;
+  width: 70%;
+  height: 55%;
+  margin: auto;
+}
+
+.tick_tac{
+  text-align: right;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .title_section {
   width: 100%;
   margin-top: auto;
-  background-color: black;
-  color: white;
+  background-color: rgb(33, 37, 41);
+  color: rgb(248, 249, 250);
   height: 9rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -35,4 +45,58 @@
   size: 5rem;
   font-size: 1.2rem;
   margin: 2rem;
+  text-align: center;
 }
+
+.button{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background:#fff;
+}
+.button_content{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.button_content a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.button_content a:before,
+.button_content a:after{
+  position: absolute;
+  content: "BUTTON";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.button_content a:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.button_content a:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.button_content a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+

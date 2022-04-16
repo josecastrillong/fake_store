@@ -1,0 +1,7 @@
+.product_section{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4rem;
+  background-color: rgba(73, 80, 87);
+
+}
