@@ -1,13 +1,13 @@
-import axios from "axios";
+import axios from 'axios';
 
 const API = 'https://fakestoreapi.com/products';
 
 export const getProducts = async () => {
-  const { data } = await axios.get(`${API}`)
+  const { data } = await axios.get(`${API}`);
   return data;
-}
+};
 
-export const getProductsById = async (productId) => {
-  const { data } = await axios.get(`${API}/${productId}`)
+export const getProductsById = async (id) => {
+  const { data } = await axios.get(`${API}/${id}`);
   return data;
-}
+};
