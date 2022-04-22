@@ -7,6 +7,10 @@
   height: 40rem;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
 .description{
   display: flex;
   flex-direction: column;
@@ -31,6 +35,10 @@
   align-items: center;
   row-gap: 3rem;
   margin-right: 7rem;
+}
+
+.link{
+  text-decoration: none;
 }
 
 @media(max-width: 768px){
