@@ -1,0 +1,81 @@
+.card_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  height: 35rem;
+  margin: auto; 
+}
+
+.button_link{
+  text-decoration: none;
+}
+
+.button{
+  position: relative;
+  top: 17rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  margin: 0 15px;
+  perspective: 1000px;
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.card_container:hover .button{
+  opacity: 1;
+}
+
+.image_section{
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+}
+
+.image {
+  width: 70%;
+  height: 55%;
+  margin: auto;
+}
+
+.tick_tac{
+  text-align: right;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title_section {
+  width: 100%;
+  margin-top: auto;
+  background-color: rgb(33, 37, 41);
+  color: rgb(248, 249, 250);
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.product_title{
+  size: 5rem;
+  font-size: 1.2rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+
+
