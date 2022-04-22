@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   row-gap: 4rem;
-  background-color: rgba(73, 80, 87, 0.355);
+  column-gap: 4rem;
+  background-color: rgb(0, 0, 0);
   padding-bottom: 4rem;
 }

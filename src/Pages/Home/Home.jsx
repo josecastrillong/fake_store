@@ -7,7 +7,7 @@ function Home() {
     <div>
       <Navbar />
       <Banner />
-      <CardsContainer />
+      <CardsContainer id="CardsContainer" />
     </div>
   );
 }

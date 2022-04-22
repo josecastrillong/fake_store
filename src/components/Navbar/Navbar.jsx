@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import styles from './Navbar.module.css';
 
 function Navbar() {
@@ -7,9 +8,9 @@ function Navbar() {
       <NavLink className={styles.text_link} to="/">
         Home
       </NavLink>
-      <NavLink className={styles.text_link} to="/card_container">
+      <HashLink className={styles.text_link} smooth to="#CardsContainer">
         Products
-      </NavLink>
+      </HashLink>
       <NavLink className={styles.text_link} to="/about">
         About
       </NavLink>
