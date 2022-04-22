@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Card.module.css';
 
 function Card(props) {
@@ -21,9 +21,9 @@ function Card(props) {
   });
   return (
     <article className={styles.card_container}>
-      <Link to={`/products/${id}`}>
-        <button type="button">{ time > 0 ? 'More details' : 'Offer is over'}</button>
-      </Link>
+      <NavLink className={styles.button_link} to={`/products/${id}`}>
+        <button className={styles.button} type="button">{ time > 0 ? 'More details' : 'Offer is over'}</button>
+      </NavLink>
       <section className={styles.image_section}>
         <img className={styles.image} src={image} alt={title} />
         <div className={styles.tick_tac}>{ time > 0 ? `${clockTime.minutes} min ${clockTime.seconds} seconds` : time}</div>
