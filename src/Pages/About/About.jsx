@@ -34,8 +34,8 @@ function About() {
             <p>email: josecastrillong@gmail.com</p>
             <p>
               If you like my work checkout my
-              <a target="_blank" rel="noreferrer" href="https://github.com/josecastrillong">
-              &nbsp;GitHub profile.
+              <a className={styles.link} target="_blank" rel="noreferrer" href="https://github.com/josecastrillong">
+              &nbsp;GitHub.
               </a>
             </p>
           </div>
