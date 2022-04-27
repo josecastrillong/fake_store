@@ -21,7 +21,7 @@ function Card(props) {
   });
   return (
     <article className={styles.card_container}>
-      <NavLink className={styles.button_link} to={`/products/${id}`}>
+      <NavLink className={styles.button_link} to={time > 0 ? `/products/${id}` : ''}>
         <button className={styles.button} type="button">{ time > 0 ? 'More details' : 'Offer is over'}</button>
       </NavLink>
       <section className={styles.image_section}>
