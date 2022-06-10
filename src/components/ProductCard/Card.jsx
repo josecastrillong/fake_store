@@ -19,6 +19,7 @@ function Card(props) {
       setTime('Offer is over');
     }
   });
+
   return (
     <article className={styles.card_container}>
       <NavLink className={styles.button_link} to={time > 0 ? `/products/${id}` : ''}>
