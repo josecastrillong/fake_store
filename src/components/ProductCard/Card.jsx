@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './Card.module.css';
 
 function Card(props) {
   const { image, title, id } = props;
+  const navigate = useNavigate();
 
   const [time, setTime] = useState(Math.round(Math.random() * (3600 - 10)));
   const clockTime = {
@@ -20,11 +21,15 @@ function Card(props) {
     }
   });
 
+  const handleClick = () => {
+    if (time > 0) {
+      navigate(`/products/${id}`);
+    }
+  };
+
   return (
     <article className={styles.card_container}>
-      <NavLink className={styles.button_link} to={time > 0 ? `/products/${id}` : ''}>
-        <button className={styles.button} type="button">{ time > 0 ? 'More details' : 'Offer is over'}</button>
-      </NavLink>
+      <button onClick={handleClick} className={styles.button} type="button">{ time > 0 ? 'More details' : 'Offer is over'}</button>
       <section className={styles.image_section}>
         <img className={styles.image} src={image} alt={title} />
         <div className={styles.tick_tac}>{ time > 0 ? `${clockTime.minutes} min ${clockTime.seconds} seconds` : time}</div>
@@ -39,13 +44,13 @@ function Card(props) {
 Card.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
-  id: PropTypes.string,
+  id: PropTypes.number,
 };
 
 Card.defaultProps = {
   image: 'some default',
   title: 'some default',
-  id: 'some default',
+  id: 0,
 };
 
 export default Card;

@@ -20,11 +20,11 @@ function CardContainer() {
     );
   }
 
+  // We can assume by this point that `isSuccess === true`
   return (
     <section className={styles.product_section}>
       {data.map((product) => (
-        // eslint-disable-next-line max-len
-        <Card key={product.id.toString()} id={product.id} image={product.image} title={product.title} />
+        <Card key={product.id} id={product.id} image={product.image} title={product.title} />
       ))}
     </section>
   );
